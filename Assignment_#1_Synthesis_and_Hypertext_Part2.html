@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AXEL's Space Adventure</title>
+    <meta http-equiv="refresh" content="5">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            overflow: hidden;
+            position: relative;
+        }
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+        }
+        .emoji {
+            position: absolute;
+            font-size: 80px;
+            cursor: pointer;
+        }
+        .tooltip {
+            visibility: hidden;
+            width: 200px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            position: absolute;
+            z-index: 1;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 100%;
+            font-size: 12px;
+        }
+        .emoji:hover .tooltip {
+            visibility: visible;
+        }
+        .fixed-star {
+        position: absolute;
+        font-size: 24px; /* Adjust the size as needed */
+        cursor: pointer;
+        }
+        .fixed-star:hover .tooltip {
+        visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <div class="emoji" style="left: 25%; top: 50%; transform: translate(-50%, 350%);">
+        🛩️
+        <div class="tooltip">I navigate through new frontiers by learning and growing beyond my initial boundaries Like Binti.</div>
+    </div>
+
+    <div class="emoji" style="left: 50%; top: 50%; transform: translate(-50%, 350%);">
+      💥💥💥
+        <div class="tooltip">The tools I use to combat challenges and bridge divides are guided by understanding & empathy.</div>
+    </div>
+
+    <div class="emoji" style="left: 75%; top: 50%; transform: translate(-50%, 350%);">
+        👾
+        <div class="tooltip">Prejudices and biases of the world, like the Meduse conflict in Binti's story.</div>
+    </div>
+    
+    <div class="fixed-star" style="left: 15%; top: 50%; transform: translate(-50%, 500%);">
+        ⭐
+      <div class="tooltip">Originating from a single-parent family, embracing the strength and resilience taught by my mother.</div>
+    </div>
+
+    <div class="fixed-star" style="left: 35%; top: 50%; transform: translate(-50%, 2000%);">
+      ⭐
+      <div class="tooltip">Valuing the knowledge and opportunities gained from my studies, akin to Binti's journey to Oomza.</div>
+    </div>
+
+    <div class="fixed-star" style="left: 70%; top: 50%; transform: translate(-50%, 2300%);">
+      ⭐
+      <div class="tooltip">Celebrating my heritage, as Binti carries the artifacts of her culture into new world.</div>
+    </div>
+
+    <div class="fixed-star" style="left: 80%; top: 50%; transform: translate(-50%, 800%);">
+      ⭐
+      <div class="tooltip">Navigating between my tradition and the new cultures I encounter, finding my unique path as Binti did.</div>
+    </div>
+    <div class="fixed-star" style="left: 50%; top: 50%; transform: translate(-50%, 400%);">
+      ⭐
+      <div class="tooltip">Harnessing my aspirations to shape an innovative future, inspired by the boundless possibilities Binti sees in the university.</div>
+    </div>
+  
+
+    <script>
+        function createStars() {
+            const starCount = 100;
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                const size = Math.random() * 3 + 1;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.top = `${Math.random() * window.innerHeight}px`;
+                star.style.left = `${Math.random() * window.innerWidth}px`;
+                document.body.appendChild(star);
+            }
+        }
+        createStars();
+    </script>
+</body>
+</html>
